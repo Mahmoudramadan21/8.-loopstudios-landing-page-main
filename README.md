@@ -24,4 +24,4 @@ Clone the repository and open `index.html` in your browser.
 
 ```bash
 git clone https://github.com/Mahmoudramadan21/8.-loopstudios-landing-page-main
-cd loopstudios-landing-page
+cd .\8.-loopstudios-landing-page-main\
