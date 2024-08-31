@@ -23,5 +23,5 @@ Check out the live version of the project [here](#).
 Clone the repository and open `index.html` in your browser.
 
 ```bash
-git clone https://github.com/yourusername/loopstudios-landing-page.git
+git clone https://github.com/Mahmoudramadan21/8.-loopstudios-landing-page-main
 cd loopstudios-landing-page
