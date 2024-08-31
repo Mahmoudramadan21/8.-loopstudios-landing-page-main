@@ -16,7 +16,7 @@ This project is a responsive landing page for Loopstudios, designed to showcase 
 
 ## Live Demo
 
-Check out the live version of the project [here](#).
+Check out the live version of the project [here](https://mahmoudramadan21.github.io/8.-loopstudios-landing-page-main/).
 
 ## Installation
 
