@@ -1,29 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const links = document.querySelector(".links");
-    const close = document.querySelector(".logo-close-wrapper .close");
-    const creationImages = document.querySelectorAll(".creation-image");
+// Select Elements
+const sidebar = document.getElementById("sidebar");
+const sidebarLinks = document.querySelectorAll(".sidebar__link");
+const menuBtn = document.querySelector(".header__menu-btn");
+const closeBtn = document.querySelector(".sidebar__close-btn");
 
-    // Toggle menu visibility
-    hamburger.addEventListener("click", function () {
-        links.classList.add("fade-in");
+// Open Sidebar
+function openMenu() {
+    sidebar.removeAttribute("inert"); // Enable sidebar
+    sidebar.style.display = "block";
+    setTimeout(() => {
+        sidebar.classList.add("opened");
+    }, 10);
+}
+
+// Close Sidebar
+function closeMenu() {
+    sidebar.classList.remove("opened");
+    setTimeout(() => {
+        sidebar.style.display = "none";
+        sidebar.setAttribute("inert", ""); // Disable sidebar
+    }, 300); // Match transition duration
+}
+
+// Event Listeners for Menu Buttons
+menuBtn.addEventListener("click", openMenu);
+closeBtn.addEventListener("click", closeMenu);
+
+// Close Sidebar and Scroll to Section on Link Click
+sidebarLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default link behavior
+
+        closeMenu(); // Close sidebar
+
+        const targetId = link.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+
+            targetSection.focus(); // Focus on target section for accessibility
+        }
     });
+});
 
-    close.addEventListener("click", function () {
-        links.classList.remove("fade-in");
-    });
-
-    // Function to update image sources based on window width
-    function updateCreationImages() {
-        creationImages.forEach(image => {
-            const newSrc = window.innerWidth <= 767 ? image.src.replace("desktop", "mobile") : image.src.replace("mobile", "desktop");
-            image.src = newSrc;
-        });
+// Close Sidebar on Window Resize
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        closeMenu();
     }
-
-    // Update images on initial load
-    updateCreationImages();
-
-    // Update images on window resize
-    window.addEventListener("resize", updateCreationImages);
 });

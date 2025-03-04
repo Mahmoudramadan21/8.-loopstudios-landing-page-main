@@ -2,41 +2,46 @@
 <html lang="en">
 
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="description"
+    content="Loopstudios - Immersive VR experiences for businesses and individuals. Explore our award-winning creations and interactive VR projects.">
+  <link rel="canonical" href="https://www.example.com">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Title -->
+  <title>Loopstudios | Immersive VR Experiences</title>
 
-  <!-- Main Css File -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/Icon.jpg">
+
+  <!-- Main CSS File -->
   <link rel="stylesheet" href="css/style.css">
+
   <!-- FontAwesome File -->
   <link rel="stylesheet" href="css/all.min.css">
-  <!-- Google Fonts -->
-  <!-- Alata -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 
-  <!-- Josefin Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
 
-  <title>Frontend Mentor | Loopstudios landing page</title>
+  <!-- Open Graph Meta Tags (for Social Media) -->
+  <meta property="og:title" content="Loopstudios | Immersive VR Experiences">
+  <meta property="og:description"
+    content="Loopstudios - Immersive VR experiences for businesses and individuals. Explore our award-winning creations and interactive VR projects.">
+  <meta property="og:image" content="images/Social Media Image.jpg">
+  <meta property="og:url" content="https://mahmoudramadan21.github.io/8.-loopstudios-landing-page-main/">
+  <meta property="og:type" content="website">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loopstudios | Immersive VR Experiences">
+  <meta name="twitter:description"
+    content="Loopstudios - Immersive VR experiences for businesses and individuals. Explore our award-winning creations and interactive VR projects.">
+  <meta name="twitter:image" content="images/Twitter Card Image.jpg">
 </head>
 
 <body>
@@ -44,43 +49,67 @@
   <!-- Start Header And Hero -->
   <div class="header-hero-wrapper">
     <div class="container">
-      <header>
-        <div class="logo">
-          <a href="#"><img src="images/logo.svg" alt="Logo"></a>
+
+      <!-- Header -->
+      <header class="header" role="banner">
+        <div class="header__logo">
+          <a href="#" aria-label="Loopstudios Home">
+            <img src="images/logo.svg" alt="Loopstudios Logo">
+          </a>
         </div>
-        <ul class="links">
-          <div class="logo-close-wrapper">
-            <img class="logo" src="images/logo.svg" alt="Logo">
-            <img class="close" src="images/icon-close.svg" alt="">
-          </div>
-          <li><a href="#about">About</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#support">Support</a></li>
-        </ul>
-        <div class="hamburger">
-          <img src="images/icon-hamburger.svg" alt="Icon">
-        </div>
+        <nav class="header__nav" role="navigation" aria-label="Main Navigation">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#vr-experience" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#creations" class="nav__link">Careers</a></li>
+            <li class="nav__item"><a href="#creations" class="nav__link">Events</a></li>
+            <li class="nav__item"><a href="#creations" class="nav__link">Products</a></li>
+            <li class="nav__item"><a href="#footer" class="nav__link">Support</a></li>
+          </ul>
+        </nav>
+        <button class="header__menu-btn" aria-label="Open Menu">
+          <img src="images/icon-hamburger.svg" alt="Menu">
+        </button>
       </header>
-      <div class="hero">
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" inert>
+        <div class="sidebar__header">
+          <div class="sidebar__logo">
+            <a href="#" aria-label="Loopstudios Home">
+              <img src="images/logo.svg" alt="Loopstudios Logo">
+            </a>
+          </div>
+          <button class="sidebar__close-btn" aria-label="Close Menu" onclick="closeMenu()">
+            <img src="images/icon-close.svg" alt="Close Menu">
+          </button>
+        </div>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a href="#vr-experience" class="sidebar__link">About</a></li>
+          <li class="sidebar__item"><a href="#creations" class="sidebar__link">Careers</a></li>
+          <li class="sidebar__item"><a href="#creations" class="sidebar__link">Events</a></li>
+          <li class="sidebar__item"><a href="#creations" class="sidebar__link">Products</a></li>
+          <li class="sidebar__item"><a href="#footer" class="sidebar__link">Support</a></li>
+        </ul>
+      </aside>
+
+      <!-- Hero Section -->
+      <div class="hero" role="img" aria-label="Immersive VR Experience">
         <div class="heading">
           <h1>Immersive experiences that deliver</h1>
         </div>
       </div>
     </div>
   </div>
-  <!-- Start Header And Hero -->
+  <!-- End Header And Hero -->
 
-
-  <!-- Start VR Experience -->
-  <div class="vr-experience">
+  <!-- VR Experience Section -->
+  <section class="vr-experience" id="vr-experience" aria-labelledby="vr-heading">
     <div class="container">
       <div class="vr-experience-image">
-        <img src="images/desktop/image-interactive.jpg" alt="Person enjoying VR experience">
+        <img src="images/desktop/image-interactive.jpg" alt="Person enjoying VR experience" loading="lazy">
       </div>
       <div class="vr-experience-content">
-        <h2>The Leader in Interactive VR</h2>
+        <h2 id="vr-heading">The Leader in Interactive VR</h2>
         <p>
           Founded in 2011, Loopstudios has been producing world-class virtual reality projects
           for some of the best companies around the globe. Our award-winning creations have
@@ -88,77 +117,103 @@
         </p>
       </div>
     </div>
-  </div>
+  </section>
   <!-- End VR Experience -->
 
-
-  <!-- Start Creations -->
-  <div class="creations">
+  <!-- Creations Section -->
+  <section class="creations" id="creations" aria-labelledby="creations-heading">
     <div class="container">
-      <!-- Title and Button Container -->
       <div class="title-button-container">
-        <h2 class="creations-title">Our Creations</h2>
-        <button class="see-all-button">See All</button>
+        <h2 id="creations-heading" class="creations-title">Our Creations</h2>
+        <button class="see-all-button" aria-label="See All Creations">See All</button>
       </div>
 
       <!-- Creations Grid -->
       <div class="creations-grid">
-        <div class="creation-item">
-          <img src="images/desktop/image-deep-earth.jpg" alt="Deep Earth" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-deep-earth.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-deep-earth.jpg" alt="Deep Earth" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">Deep Earth</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-night-arcade.jpg" alt="Night Arcade" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-night-arcade.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-night-arcade.jpg" alt="Night Arcade" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">Night Arcade</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-soccer-team.jpg" alt="Soccer Team VR" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-soccer-team.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-soccer-team.jpg" alt="Soccer Team VR" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">Soccer Team VR</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-grid.jpg" alt="The Grid" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-grid.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-grid.jpg" alt="Soccer Team VR" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">The Grid</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-from-above.jpg" alt="From Up Above VR" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-from-above.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-from-above.jpg" alt="Soccer Team VR" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">From Up Above VR</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-pocket-borealis.jpg" alt="Pocket Borealis" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-pocket-borealis.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-pocket-borealis.jpg" alt="Soccer Team VR" class="creation-image"
+              loading="lazy">
+          </picture>
           <h3 class="creation-title">Pocket Borealis</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-curiosity.jpg" alt="The Curiosity" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-curiosity.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-curiosity.jpg" alt="Soccer Team VR" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">The Curiosity</h3>
         </div>
-        <div class="creation-item">
-          <img src="images/desktop/image-fisheye.jpg" alt="Make It Fisheye" class="creation-image">
+        <div class="creation-item" tabindex="0">
+          <picture>
+            <source srcset="images/mobile/image-fisheye.jpg" media="(max-width: 768px)">
+            <img src="images/desktop/image-fisheye.jpg" alt="Soccer Team VR" class="creation-image" loading="lazy">
+          </picture>
           <h3 class="creation-title">Make It Fisheye</h3>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </section>
   <!-- End Creations -->
 
 
-  <!-- Start Footer -->
-  <footer class="footer">
+  <!-- Footer Section -->
+  <footer class="footer" id="footer" role="contentinfo">
     <div class="container">
       <div class="footer-logo">
-        <a href="#"><img src="images/logo.svg" alt="Logo"></a>
+        <a href="#" aria-label="Loopstudios Home">
+          <img src="images/logo.svg" alt="Loopstudios Logo">
+        </a>
       </div>
       <ul class="footer-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="#vr-experience">About</a></li>
+        <li><a href="#creations">Careers</a></li>
+        <li><a href="#creations">Events</a></li>
+        <li><a href="#creations">Products</a></li>
+        <li><a href="#footer">Support</a></li>
       </ul>
       <div class="footer-social-icons">
-        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
-        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
-        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+        <a href="#" aria-label="Pinterest"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+        <a href="#" aria-label="Instagram"><img src="images/icon-instagram.svg" alt="Instagram"></a>
       </div>
       <div class="copyright">
         <p>© 2024 Loopstudios. All rights reserved.</p>
@@ -167,9 +222,7 @@
   </footer>
   <!-- End Footer -->
 
-
-
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
