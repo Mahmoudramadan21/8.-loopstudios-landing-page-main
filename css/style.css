@@ -81,7 +81,7 @@ a {
 
 .header-hero-wrapper .container {
     position: relative;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .header {
