@@ -246,6 +246,10 @@ a {
     position: relative;
 }
 
+.vr-experience-image img {
+    min-width: 500px;
+}
+
 .vr-experience .container .vr-experience-content {
     position: absolute;
     right: 0;
