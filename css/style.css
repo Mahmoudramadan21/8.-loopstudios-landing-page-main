@@ -246,7 +246,7 @@ a {
     position: relative;
 }
 
-.vr-experience-image img {
+.vr-experience .container img {
     min-width: 731px;
     min-height: 500px;
 }
