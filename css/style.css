@@ -309,7 +309,7 @@ a {
 }
 
 @media (max-width: 767px) {
-    .vr-experience-image img {
+    .vr-experience .container img {
         min-width: auto;
     }
     .vr-experience .container .vr-experience-content {
