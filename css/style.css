@@ -65,10 +65,18 @@ a {
 
 /* Start Header And Hero */
 .header-hero-wrapper {
-    background-image: url("../images/desktop/image-hero.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -7em;
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.header-hero-wrapper .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .header-hero-wrapper .container {
@@ -138,7 +146,7 @@ a {
     }
 }
 
-.sidebar {
+.mobile-nav {
     position: fixed;
     right: 0;
     top: 0;
@@ -152,30 +160,30 @@ a {
     transition: 0.5s;
 }
 
-.sidebar.opened {
+.mobile-nav.opened {
     transform: translateX(0);
 }
 
-.sidebar .sidebar__header {
+.mobile-nav .mobile-nav__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.sidebar .sidebar__header .sidebar__close-btn {
+.mobile-nav .mobile-nav__header .mobile-nav__close-btn {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
-.sidebar .sidebar__list {
+.mobile-nav .mobile-nav__list {
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.sidebar .sidebar__list .sidebar__link {
+.mobile-nav .mobile-nav__list .mobile-nav__link {
     position: relative;
     padding-bottom: 12px;
     text-transform: uppercase;
@@ -186,7 +194,7 @@ a {
     transition: 0.3s;
 }
 
-.sidebar .sidebar__list .sidebar__link::after {
+.mobile-nav .mobile-nav__list .mobile-nav__link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -197,7 +205,7 @@ a {
     transition: width 0.3s;
 }
 
-.sidebar .sidebar__list .sidebar__link:hover::after {
+.mobile-nav .mobile-nav__list .mobile-nav__link:hover::after {
     width: 100%;
 }
 

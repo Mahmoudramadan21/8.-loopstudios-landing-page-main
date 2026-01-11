@@ -48,16 +48,23 @@
 
   <!-- Start Header And Hero -->
   <div class="header-hero-wrapper">
-    <div class="container">
+    <img
+      class="hero-bg"
+      src="images/desktop/image-hero.jpg"
+      alt=""
+      fetchpriority=high
+      aria-hidden="true"
+    >
 
+    <div class="container">
       <!-- Header -->
-      <header class="header" role="banner">
+      <header class="header">
         <div class="header__logo">
           <a href="#" aria-label="Loopstudios Home">
             <img src="images/logo.svg" alt="Loopstudios Logo">
           </a>
         </div>
-        <nav class="header__nav" role="navigation" aria-label="Main Navigation">
+        <nav class="header__nav" aria-label="Main Navigation">
           <ul class="nav__list">
             <li class="nav__item"><a href="#vr-experience" class="nav__link">About</a></li>
             <li class="nav__item"><a href="#creations" class="nav__link">Careers</a></li>
@@ -71,26 +78,34 @@
         </button>
       </header>
 
-      <!-- Sidebar -->
-      <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" inert>
-        <div class="sidebar__header">
-          <div class="sidebar__logo">
-            <a href="#" aria-label="Loopstudios Home">
-              <img src="images/logo.svg" alt="Loopstudios Logo">
-            </a>
-          </div>
-          <button class="sidebar__close-btn" aria-label="Close Menu" onclick="closeMenu()">
-            <img src="images/icon-close.svg" alt="Close Menu">
+      <!-- Mobile Navbar -->
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Main navigation"
+      >
+        <div class="mobile-nav__header">
+          <a href="#" aria-label="Loopstudios Home">
+            <img src="images/logo.svg" alt="Loopstudios Logo">
+          </a>
+      
+          <button
+            class="mobile-nav__close-btn"
+            aria-label="Close menu"
+          >
+            <img src="images/icon-close.svg" alt="">
           </button>
         </div>
-        <ul class="sidebar__list">
-          <li class="sidebar__item"><a href="#vr-experience" class="sidebar__link">About</a></li>
-          <li class="sidebar__item"><a href="#creations" class="sidebar__link">Careers</a></li>
-          <li class="sidebar__item"><a href="#creations" class="sidebar__link">Events</a></li>
-          <li class="sidebar__item"><a href="#creations" class="sidebar__link">Products</a></li>
-          <li class="sidebar__item"><a href="#footer" class="sidebar__link">Support</a></li>
+      
+        <ul class="mobile-nav__list">
+          <li><a href="#vr-experience">About</a></li>
+          <li><a href="#creations">Careers</a></li>
+          <li><a href="#creations">Events</a></li>
+          <li><a href="#creations">Products</a></li>
+          <li><a href="#footer">Support</a></li>
         </ul>
-      </aside>
+      </nav>
+
 
       <!-- Hero Section -->
       <div class="hero" role="img" aria-label="Immersive VR Experience">
