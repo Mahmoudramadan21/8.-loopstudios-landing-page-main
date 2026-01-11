@@ -247,7 +247,8 @@ a {
 }
 
 .vr-experience-image img {
-    min-width: 500px;
+    min-width: 731px;
+    min-height: 500px;
 }
 
 .vr-experience .container .vr-experience-content {
@@ -310,7 +311,8 @@ a {
 
 @media (max-width: 767px) {
     .vr-experience .container img {
-        min-width: auto;
+        min-width: 100%;
+        min-height: 100%;
     }
     .vr-experience .container .vr-experience-content {
         text-align: center;
