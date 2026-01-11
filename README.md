@@ -16,12 +16,12 @@ This project is a responsive landing page for Loopstudios, designed to showcase 
 
 ## Live Demo
 
-Check out the live version of the project [here](#).
+Check out the live version of the project [here](https://mahmoudramadan21.github.io/loopstudios-landing-page-main/).
 
 ## Installation
 
 Clone the repository and open `index.html` in your browser.
 
 ```bash
-git clone https://github.com/Mahmoudramadan21/8.-loopstudios-landing-page-main
+git clone https://github.com/Mahmoudramadan21/loopstudios-landing-page-main
 cd loopstudios-landing-page
