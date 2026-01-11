@@ -309,6 +309,9 @@ a {
 }
 
 @media (max-width: 767px) {
+    .vr-experience-image img {
+        min-width: auto;
+    }
     .vr-experience .container .vr-experience-content {
         text-align: center;
         width: 90% !important;

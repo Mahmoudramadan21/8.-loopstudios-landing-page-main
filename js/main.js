@@ -1,55 +1,42 @@
 // Select Elements
-const sidebar = document.getElementById("sidebar");
-const sidebarLinks = document.querySelectorAll(".sidebar__link");
+const mobileNav = document.getElementById("mobile-nav");
 const menuBtn = document.querySelector(".header__menu-btn");
-const closeBtn = document.querySelector(".sidebar__close-btn");
+const closeBtn = document.querySelector(".mobile-nav__close-btn");
 
-// Open Sidebar
+// Open mobile nav
 function openMenu() {
-    sidebar.removeAttribute("inert"); // Enable sidebar
-    sidebar.style.display = "block";
-    setTimeout(() => {
-        sidebar.classList.add("opened");
-    }, 10);
+  mobileNav.removeAttribute("inert");
+  mobileNav.style.display = "block";
+  requestAnimationFrame(() => {
+    mobileNav.classList.add("opened");
+  });
 }
 
-// Close Sidebar
+// Close mobile nav
 function closeMenu() {
-    sidebar.classList.remove("opened");
-    setTimeout(() => {
-        sidebar.style.display = "none";
-        sidebar.setAttribute("inert", ""); // Disable sidebar
-    }, 300); // Match transition duration
+  mobileNav.classList.remove("opened");
+  setTimeout(() => {
+    mobileNav.style.display = "none";
+    mobileNav.setAttribute("inert", "");
+  }, 300);
 }
 
-// Event Listeners for Menu Buttons
+// Event Listeners
 menuBtn.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", closeMenu);
 
-// Close Sidebar and Scroll to Section on Link Click
-sidebarLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent default link behavior
+// Event Delegation for mobile nav links
+mobileNav.addEventListener("click", (e) => {
+  const link = e.target.closest("a");
 
-        closeMenu(); // Close sidebar
+  if (!link) return;
 
-        const targetId = link.getAttribute("href");
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-
-            targetSection.focus(); // Focus on target section for accessibility
-        }
-    });
+  closeMenu();
 });
 
-// Close Sidebar on Window Resize
+// Close on resize
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-        closeMenu();
-    }
+  if (window.innerWidth > 768) {
+    closeMenu();
+  }
 });
